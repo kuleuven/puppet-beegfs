@@ -9,13 +9,11 @@ class beegfs::repo::redhat (
 
   $_os_release = $facts.dig('os', 'release', 'major')
 
-  # If using the old version pattern the release folder is the same as the major
-  # version; if using the new pattern we need to replace dots (`.`) with spaces
-  # (` `)
-  $_release = if $release =~ /^\d{4}/ {
-    $release
-  } else {
+  # If using version 7.1 the release folder has an underscore instead of a period
+  $_release = if $release == '7.1' {
     $release.regsubst('\.', '_')
+  } else {
+    $release
   }
 
   if $manage_repo {
