@@ -1,5 +1,12 @@
 # deric-beegfs Changelog
 
+## 2020-11-18 Release 0.6.0
+
+- Support annomalies in versioning [#16](https://github.com/deric/puppet-beegfs/pull/16)
+- Add support for connNetFilterFile [#17](https://github.com/deric/puppet-beegfs/pull/17)
+- Extend list of supported distributions (though not all beegfs releases works on all distributions)
+- Interfaces configured after setting up client package
+
 ## 2019-09-25 Release 0.5.0
 
 ### Breaking Changes
