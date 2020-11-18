@@ -42,3 +42,5 @@ jobs:
       script: bundle exec rake acceptance
       services: docker
       stage: acceptance
+  allow_failures:
+    - env: RAKE_ENV=ci BEAKER_debug=true BEAKER_set=debian9-6.3
