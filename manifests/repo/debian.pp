@@ -35,20 +35,16 @@ class beegfs::repo::debian (
             '16.04','16.10','17.04','17.10':{
               $_os_release = 'stretch'
             }
+            '18.04','18.10','19.04','19.10':{
+              $_os_release = 'buster'
+            }
             default: {
-              $_os_release = 'stretch'
+              $_os_release = 'buster'
             }
           }
         }
         default: {
-          case $facts.dig('os', 'distro', 'codename') {
-            'buster':{
-              $_os_release = 'stretch'
-            }
-            default: {
-              $_os_release = $facts.dig('os', 'distro', 'codename')
-            }
-          }
+          $_os_release = $facts.dig('os', 'distro', 'codename')
         }
       }
     }
