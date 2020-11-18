@@ -72,7 +72,7 @@ class { 'beegfs::storage':
 }
 ```
 
-In some cases, interfaces can have multiple ips, and only a subset of them should be used. 
+In some cases, interfaces can have multiple ips, and only a subset of them should be used.
 In this case, the list of allowed subnets can be passed as the networks parameter. It should be an array if specified.
 
 ```puppet
@@ -165,3 +165,11 @@ $ BEAKER_destroy=no rake acceptance
 $ docker exec -it 98aa06308c67 bash
 $ /opt/puppetlabs/bin/puppet apply /tmp/apply_manifest.pp.OveoVG
 ```
+
+
+## Rubocop
+
+Update rubocop config with given target version:
+```
+ mry --target=0.70.0 .rubocop.yml
+ ```
