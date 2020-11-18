@@ -6,7 +6,7 @@ describe 'beegfs meta' do
   context 'default parameters' do
     # Using puppet_apply as a helper
     it 'should work idempotently with no errors' do
-      pp = <<-EOS
+      pp = <<-PUPPET
       class { '::beegfs':
         release           => '7.1',
         allow_new_servers => true,
@@ -15,7 +15,7 @@ describe 'beegfs meta' do
       -> class { '::beegfs::meta':
         mgmtd_host => '127.0.0.1'
       }
-      EOS
+      PUPPET
 
       # Run it twice and test for idempotency
       expect(apply_manifest(pp,

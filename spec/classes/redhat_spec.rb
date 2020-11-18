@@ -40,7 +40,7 @@ describe 'beegfs::client' do
     it {
       is_expected.to contain_yumrepo('beegfs_rhel7').with(
         'enabled' => '1',
-        'baseurl' => "https://www.beegfs.io/release/beegfs_7_1/dists/rhel7",
+        'baseurl' => "https://www.beegfs.io/release/beegfs_7_1/dists/rhel7"
       )
     }
 
@@ -88,7 +88,7 @@ describe 'beegfs::client' do
     it {
       is_expected.to contain_yumrepo('beegfs_rhel7').with(
         'enabled' => '1',
-        'baseurl' => "https://www.beegfs.io/release/beegfs_7.2/dists/rhel7",
+        'baseurl' => "https://www.beegfs.io/release/beegfs_7.2/dists/rhel7"
       )
     }
 
@@ -117,5 +117,4 @@ describe 'beegfs::client' do
         )
     end
   end
-
 end
