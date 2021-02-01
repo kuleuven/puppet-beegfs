@@ -18,6 +18,7 @@ class beegfs::meta (
   Optional[Array[String]] $networks             = undef,
   Stdlib::AbsolutePath    $networks_file        = '/etc/beegfs/networks.meta',
   Boolean                 $enable_acl           = $beegfs::enable_acl,
+  Boolean                 $enable_rdma          = $beegfs::enable_rdma,
   Stdlib::Port            $meta_tcp_port        = $beegfs::meta_tcp_port,
   Stdlib::Port            $meta_udp_port        = $beegfs::meta_udp_port,
   Stdlib::Port            $mgmtd_tcp_port       = $beegfs::mgmtd_tcp_port,
